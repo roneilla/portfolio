@@ -1,0 +1,44 @@
+/* css for project pages */
+
+.work-header-img {
+    width: 1000px;
+    height: 500px;
+    background-color: #ccc;
+    margin-bottom: 50px;
+}
+
+.work-details-wrapper {
+    margin: 50px auto;
+    width: 800px;
+}
+
+.work-details-section {
+    float: left;
+    width: 150px;
+    margin: 0 5px;
+}
+
+.work-section {
+    float: left;
+    width: 1000px;
+    margin-top: 75px;
+}
+
+.work-title {
+    margin-bottom: 50px;
+}
+
+.work-team {
+    width: 650px;
+    margin: 0 auto;
+    height: auto;
+}
+
+.work-team-wrapper {
+    margin: 0 40px;
+    float: left;
+}
+
+.work-description {
+    line-height: 28px;
+}

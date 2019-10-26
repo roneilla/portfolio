@@ -57,11 +57,16 @@ nav ul li a {
     font-weight: 700;
 }
 
-footer {
-    background-color: #ccc;
+footer p {
+    font-size: 16px;
+    text-align: center;
+    color: #666;
+    font-weight: 300;
+
 }
 
-.footer p {
-    text-align: center;
-    font-size: 16px;
+footer p a {
+    font-weight: 400;
+    text-decoration: underline;
+    color: #333;
 }
