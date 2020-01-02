@@ -1,0 +1,115 @@
+@import url("https://use.typekit.net/wiz3scy.css");
+
+* {
+    font-family: aktiv-grotesk, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*font styles*/
+.medium {
+    font-weight: 500;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.italic {
+    font-style: italic;
+}
+
+/*text styles*/
+
+.title {
+    font-size: 70px;
+    font-weight: 500;
+    line-height: 96px;
+    color: #101010;
+    letter-spacing: 0.5px;
+}
+
+.heading {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 60px;
+    color: #101010;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.heading2 {
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 40px;
+    color: #101010;
+    margin-bottom: 10px;
+
+}
+
+.subheading {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #101010;
+    margin-bottom: 10px;
+
+}
+
+.subheading2 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 40px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.paragraph-1 {
+    font-size: 25px;
+    line-height: 51px;
+    font-weight: 500;
+    color: #101010;
+    margin-bottom: 10px;
+
+}
+
+.paragraph-2 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 60px;
+    color: #101010;
+    margin-bottom: 10px;
+
+}
+
+.paragraph-3 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+    color: #101010;
+    margin-bottom: 10px;
+
+}
+
+.link a {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 40px;
+    color: #101010;
+    letter-spacing: 0.5px;
+    padding-bottom: 3px;
+}
+
+.link a:hover {
+    border-bottom: 2px solid #101010;
+}

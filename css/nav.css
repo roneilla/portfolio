@@ -1,0 +1,102 @@
+.nav {
+    position: fixed;
+}
+
+.top-navigation {
+    height: 75px;
+    padding: 25px 0;
+    width: 100vw;
+    position: fixed;
+}
+
+.logo a {
+    left: 50px;
+    color: #101010;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 20px;
+    position: fixed;
+    height: 25px;
+}
+
+.contact-top a {
+    height: 30px;
+    right: 50px;
+    font-size: 20px;
+    color: #101010;
+    padding-bottom: 3px;
+    margin-right: 50px;
+    position: fixed;
+
+}
+
+.contact-top a:hover {
+    border-bottom: 2px solid #101010;
+}
+
+.side-navigation {
+    width: 100px;
+    height: 100vh;
+}
+
+.nav-icon {
+    width: 35px;
+    margin: 0px auto;
+    position: fixed;
+    left: 50px;
+    top: 50vh;
+    z-index: 5;
+}
+
+.menu {
+    width: 100vw;
+    height: 100vh;
+    padding: 100px 120px;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    background-color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    display: inline-block;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    width: 100%;
+    margin: 20px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #101010;
+    font-size: 100px;
+    padding-bottom: 5px;
+}
+
+nav ul li a:hover {
+    border-bottom: 5px solid #101010;
+}
+
+.menu-left {
+    width: 70vh;
+    float: left;
+}
+
+.menu-right {
+    width: 30vh;
+    float: right;
+}
+
+.contacts {
+    margin-top: 300px;
+}
+
+.social-contacts {
+    margin-top: 50px;
+    width: 300px;
+    height: 200px;
+}

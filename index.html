@@ -1,93 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roneilla Bumanlag</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <nav>
-        <div class="nav-icon"><a href="index.html">RB</a></div>
-        <ul>
-            <li><a class="current" href="index.html">Work</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="project-template.html">Contact</a></li>
-        </ul>
-    </nav>
-    <div class="home-work-wrapper">
-        <div class="home-work-left">
-            <div class="home-work-title header1">Interactive Mural</div>
-            <div class="line"></div>
-            <div class="home-work-description p1">This is a project description. This is a project description. This is a project description. This is a project description.</div>
-        </div>
-        <div class="home-work-right">
-            <div class="home-work-img"></div>
-        </div>
-        <div class="home-work-bottom">
-            <div class="home-work-button"><a href="/link/to/page">VIEW</a>
-            </div>
-            <div class="home-work-body">
-                <div class="home-work-body-section">
-                    <div class="home-work-body-section-title header5">Date</div>
-                    <div class="home-work-body-section-description p2">June 2019</div>
-                </div>
-                <div class="home-work-body-section">
-                    <div class="home-work-body-section-title header5">Duration</div>
-                    <div class="home-work-body-section-description p2">2 weeks</div>
-                </div>
-                <div class="home-work-body-section">
-                    <div class="home-work-body-section-title header5">Role</div>
-                    <div class="home-work-body-section-description p2">AR Developer</div>
-                </div>
-                <div class="home-work-body-section">
-                    <div class="home-work-body-section-title header5">Type</div>
-                    <div class="home-work-body-section-description p2">Internship</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="home-work-wrapper">
-        <div class="home-work-left">
-            <div class="home-work-title header1">Google Doodle VR</div>
-            <div class="home-work-line"></div>
-            <div class="home-work-description p1">This is a project description. This is a project description. This is a project description. This is a project description.</div>
-        </div>
-        <div class="home-work-right">
-            <div class="home-work-img"></div>
-        </div>
-        <div class="home-work-bottom">
-            <div class="home-work-button"><a href="/link/to/page">VIEW</a>
-            </div>
-            <div class="home-work-body">
-                <div class="home-work-body-section">
-                    <div class="home-work-body-section-title header5">Date</div>
-                    <div class="home-work-body-section-description p2">Nov 2018</div>
-                </div>
-                <div class="home-work-body-section">
-                    <div class="home-work-body-section-title header5">Duration</div>
-                    <div class="home-work-body-section-description p2">6 weeks</div>
-                </div>
-                <div class="home-work-body-section">
-                    <div class="home-work-body-section-title header5">Role</div>
-                    <div class="home-work-body-section-description p2">Front End Developer</div>
-                </div>
-                <div class="home-work-body-section">
-                    <div class="home-work-body-section-title header5">Type</div>
-                    <div class="home-work-body-section-description p2">School Project</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer>
-        <p style="float: left;">Coded with Love &hearts;</p>
-        <p style="float: right;">© Roneilla Bumanlag</p>
-        <p><a href="mailto:hello@roneilla.com">hello@roneilla.com</a></p>
-    </footer>
-</body>
+    <img class="nav-icon" id="nav-icon" src="/assets/icons/menu.svg">
 
-</html>
+    <div class="nav">
+        <div class="top-navigation">
+            <div class="logo"><a href="index.html">RB</a></div>
+            <div class="contact-top"><a href="contact.html">Contact</a></div>
+        </div>
+    </div>
+    <div class="menu" id="menu">
+        <div class="menu-left">
+            <nav class="nav-main">
+                <ul>
+                    <li><a href="index.html">Work</a></li>
+                    <li><a href="lab.html">Lab</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="menu-right">
+            <div class="contacts">
+                <div class="paragraph-3">EMAIL</div>
+                <div class="paragraph-3">hello@roneilla.com</div>
+                <div class="paragraph-3">MOBILE</div>
+                <div class="paragraph-3">647-994-3108</div>
+            </div>
+            <div class="social-contacts">
+                <div class="paragraph-3">FIND ME ON SOCIAL MEDIA</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="title header-intro">Hi! I'm Roneilla, an Interaction Designer based in Toronto.</div>
+            <div class="link"><a id="scroll-button" href="#">View my work</a></div>
+        </div>
+        <div class="gallery">
+            <div class="gallery-section">
+                <img class="gallery-img" src="/assets/thumbnails/doodlvr.jpg" alt="">
+                <div class="gallery-caption">
+                    <div class="subheading2">AR/VR</div>
+                    <div class="heading">Doodle VR</div>
+                    <div class="paragraph-3">
+                        A virtual reality experience celebrating the 50 years of Virtual Reality.
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-section">
+                <img class="gallery-img" src="/assets/thumbnails/wrkspc.jpg" alt="">
+                <div class="gallery-caption">
+                    <div class="subheading2">UX Design</div>
+                    <div class="heading">wrkspc</div>
+                    <div class="paragraph-3">
+                        A mobile app designed to help students find suitable and available workspaces around campus. </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="js/index.js"></script></html>
