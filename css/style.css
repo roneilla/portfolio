@@ -1,0 +1,138 @@
+/*
+
+Custom CSS for my portfolio
+roneilla.com/design
+
+
+Colors:
+#FCFBF9 - cream
+#2FD09A - mint 
+#3C566F - dark blue
+#6387A5 - blue
+#F2F2F2 - grey
+#24B3E0 - teal
+#11487e - darker blue
+
+
+Fonts:
+font-family: 'Roboto Mono', monospace;
+font-family: 'Roboto', sans-serif;
+*/
+
+body {
+    margin: 0;
+    /*    background-color: #DC4379;*/
+    background-color: #101010;
+    min-width: 370px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+nav {
+    width: 100%;
+    padding: 20px;
+    float: left;
+}
+
+.nav-link {
+    font-family: 'Roboto Mono', monospace;
+    text-transform: uppercase;
+    float: left;
+    text-decoration: none;
+    color: #f2f2f2;
+    padding: 0.5rem;
+}
+
+.nav-link:hover {
+/*    background-color: #f2f2f2;*/
+    color: #eee;
+        text-decoration: underline;
+    box-sizing: border-box;
+}
+
+
+.right {
+    float: right;
+}
+
+.header {
+    padding: 100px 20px;
+    float: left;
+    width: 100%;
+}
+
+.h1 {
+    font-weight: 400;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 3.5rem;
+    color: #f2f2f2;
+}
+
+.h3 {
+    font-weight: 400;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1rem;
+    color: #f2f2f2;
+}
+
+.portfolio-gallery {
+    padding: 20px;
+}
+
+.card {
+    border-radius: 0;
+    border: 0;
+}
+
+.card-img {
+    position: relative;
+    border-radius: 0;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #2FD09A;
+}
+
+.card-img:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: #101010;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.card-img-top {
+    border-radius: 0;
+}
+
+.footer-text {
+    font-size: 0.75rem;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    color: #f2f2f2;
+    padding: 20px 0;
+}
