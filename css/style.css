@@ -21,8 +21,8 @@ font-family: 'Roboto', sans-serif;
 
 body {
     margin: 0;
-    /*    background-color: #DC4379;*/
-    background-color: #101010;
+/*        background-color: #DC4379;*/
+    background-color: #191919;
     min-width: 370px;
     max-width: 1000px;
     margin: 0 auto;
@@ -44,9 +44,9 @@ nav {
 }
 
 .nav-link:hover {
-/*    background-color: #f2f2f2;*/
+    /*    background-color: #f2f2f2;*/
     color: #eee;
-        text-decoration: underline;
+    text-decoration: underline;
     box-sizing: border-box;
 }
 
@@ -64,7 +64,15 @@ nav {
 .h1 {
     font-weight: 400;
     font-family: 'Roboto Mono', monospace;
-    font-size: 3.5rem;
+    font-size: 3rem;
+    color: #f2f2f2;
+    line-height: 5rem;
+}
+
+.h2 {
+    font-weight: 500;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5rem;
     color: #f2f2f2;
 }
 
@@ -75,7 +83,28 @@ nav {
     color: #f2f2f2;
 }
 
-.portfolio-gallery {
+
+.about-h1 {
+    font-weight: 400;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 3.5rem;
+    color: #f2f2f2;
+    line-height: 7rem;
+}
+
+
+.about-p {
+    font-weight: 400;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.25rem;
+    color: #f2f2f2;
+    line-height: 3rem;
+    width: 90%;
+    margin: 30px 0;
+}
+
+.portfolio-gallery,
+.container {
     padding: 20px;
 }
 
@@ -129,10 +158,65 @@ nav {
     border-radius: 0;
 }
 
+.social-container {
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin: 50px 0 50px 0;
+}
+
+.social-gallery {
+    width: 50%;
+    float: left;
+}
+
+.social-icons {
+    width: 2rem;
+    margin: 1rem 1.5rem;
+    vertical-align: middle;
+}
+
+.social-icons:hover, .social-link:hover {
+    opacity: 0.6;
+}
+
+
+.h3 a {
+    text-decoration: underline;
+    font-weight: 400;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1rem;
+    color: #f2f2f2;
+
+}
+
+.social-title {
+    margin-bottom: 2rem;
+    font-weight: 500;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.25rem;
+    color: #f2f2f2;
+    line-height: 3rem;
+    text-align: left;
+    width: 50%;
+    float: left;
+}
+
+.social-link {
+    margin: 1.5rem 0;
+}
 .footer-text {
-    font-size: 0.75rem;
+    font-size: 1rem;
     text-align: center;
     font-family: 'Roboto Mono', monospace;
     color: #f2f2f2;
     padding: 20px 0;
+}
+
+@media (max-width:767.98px) {
+
+    .social-title,
+    .social-gallery {
+        width: 100%;
+    }
 }
