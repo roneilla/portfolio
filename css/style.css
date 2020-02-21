@@ -17,9 +17,35 @@ body {
     font-family: 'aktiv-grotesk', sans-serif;
 }
 
-.h1 {
+h1 {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+h3 {
     font-size: 1.5rem;
     font-weight: 400;
+
+}
+
+h4 {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 2rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+
+.bold {
+    font-weight: 500;
 }
 
 .text-mono-up {
@@ -31,13 +57,24 @@ body {
     font-family: 'Roboto Mono', monospace;
 }
 
+.text-mono-bold {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+}
+
+
+/*
+#sketch-container {
+    transition: 2s linear ease;
+}
+*/
 
 /* Navigation */
 
 .nav-bar {
     width: 100%;
     height: 60px;
-/*    border-bottom: 1px solid #101010;*/
+    /*    border-bottom: 1px solid #000;*/
 }
 
 .nav-option {
@@ -57,11 +94,11 @@ body {
 
 a {
     text-decoration: none;
-    color: #101010;
+    color: #000;
 }
 
 a:hover {
-    color: #101010;
+    color: #000;
     text-decoration: underline;
 }
 
@@ -72,13 +109,13 @@ a:hover {
 .header-container {
     width: 100%;
     float: left;
-    padding: 10vh 0;
+    padding: 5vh 0;
     /*
-    border-left: 1.5px solid #101010;
+    border-left: 1.5px solid #000;
     background-color: rgba(0, 0, 0, 0.05);
 */
     margin: 5vh 0;
-    color: #101010;
+    color: #000;
 }
 
 .header-title {
@@ -103,7 +140,7 @@ a:hover {
 /* Work */
 
 .work-wrapper {
-    border-top: 1px #101010 solid;
+    border-top: 1px #000 solid;
     float: left;
     padding-top: 3rem;
 }
@@ -121,10 +158,11 @@ a:hover {
     margin-right: 2rem;
     color: #999;
     cursor: pointer;
+    transition: 0.5s ease;
 }
 
 .filter-option:hover {
-    color: #101010;
+    color: #000;
 }
 
 .filter-option:active {
@@ -133,7 +171,7 @@ a:hover {
 
 .filter-option.active {
     font-weight: 700;
-    color: #101010;
+    color: #000;
 }
 
 .card {
@@ -151,7 +189,7 @@ a:hover {
 }
 
 .card-title {
-    color: #101010;
+    color: #000;
     font-size: 1rem;
     width: 50%;
     float: left;
@@ -183,10 +221,10 @@ a:hover {
 /* Footer */
 
 .footer-text {
-    width: 75%;
+    width: 100%;
     margin: 0 0 2rem 0;
     text-align: left;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 .email-link {
@@ -198,13 +236,15 @@ a:hover {
 }
 
 .copyright {
+    margin-top: 20px;
     text-align: right;
+    float: right;
 }
 
 .social-icon {
     width: 30px;
     height: auto;
-    margin: 2rem 1rem;
+    margin: 2em 1rem 2rem 1rem;
     transition: 0.25s ease;
 }
 
@@ -213,12 +253,13 @@ a:hover {
 }
 
 footer {
-    border-top: 1px solid #101010;
+    border-top: 1px solid #000;
     padding-top: 50px;
     margin: 100px 0 50px 0;
     height: 300px;
     float: left;
     width: 100%;
+    font-weight: 300;
 }
 
 .footer-section {
@@ -226,6 +267,176 @@ footer {
     float: left;
 }
 
+/* Project */
+
+.img {
+    width: 100%;
+    object-fit: cover;
+    height: 500px;
+    float: left;
+    margin: 3rem 0;
+}
+
+.img-med {
+    width: 30%;
+    object-fit: cover;
+    height: 500px;
+    margin: 0 1.5%;
+    float: left;
+}
+
+.img-ctn {
+    width: 100%;
+    object-fit: contain;
+    float: left;
+    margin: 1.5rem 0;
+}
+
+.img-ctn-med {
+    width: 50%;
+    object-fit: contain;
+    float: left;
+    margin: 1.5rem 0;
+}
+
+.img-ctn-med-ctr {
+    width: 50%;
+    object-fit: contain;
+    float: left;
+    margin: 1.5rem 25%;
+}
+
+
+.img-ctn-sm {
+    width: 20%;
+    object-fit: contain;
+    float: left;
+    margin: 1.5rem 2%;
+}
+
+.project-header-wrapper {
+    margin: 50px 0;
+    width: 100%;
+    float: left;
+}
+
+.project-details {
+    margin-top: 25px;
+}
+
+.project-header-title {
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.project-section-sm {
+    width: 25%;
+    float: left;
+}
+
+.project-section-med {
+    margin-left: 5%;
+    width: 70%;
+    float: left;
+}
+
+.project-callout {
+    padding: 5rem 5rem;
+    margin: 3rem 0;
+    /*    border: 5px #333 solid;*/
+    /*    background-color: rgba(0, 0, 0, 0.1);*/
+    float: left;
+    color: #333;
+}
+
+.callout-title {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.25rem;
+}
+
+.callout-heading {
+    font-size: 2rem;
+    line-height: 4rem;
+    margin: 1.5rem auto 0 auto;
+    text-align: center;
+    font-weight: 300;
+
+}
+
+.project-description {
+    font-size: 1.5rem;
+    line-height: 3.25rem;
+    font-weight: 300;
+}
+
+.project-section {
+    margin: 50px 0;
+    float: left;
+    width: 100%;
+}
+
+
+.section-paragraph {
+    font-size: 1.25rem;
+    line-height: 3.5rem;
+    font-weight: 300;
+}
+
+.section-title {
+    line-height: 3rem;
+}
+
+.section-subheading {
+    font-size: 1.25rem;
+    margin-top: 2.5rem;
+}
+
+.project-gallery {
+    margin: 6rem 0;
+    float: left;
+}
+
+/*
+.section-wrapper {
+    float: left;
+    width: 65%;
+}
+*/
+
+#bridge-gallery {
+    width: 100%;
+    float: left;
+}
+
+#bridge-section-1 {
+    width: 45%;
+    float: left;
+    margin-left: 5%;
+}
+
+/* Info page */
+
+.about-container {
+    padding-top: 4rem;
+    width: 100%;
+    float: left;
+}
+
+#about-img {
+    width: 35%;
+    float: left;
+}
+
+#about-text {
+    font-size: 1.25rem;
+    line-height: 3rem;
+    width: 60%;
+    margin-left: 5%;
+    float: left;
+    padding: 0 3rem;
+    font-weight: 300;
+}
 
 /* Media Queries */
 @media (max-width: 575.98px) {
@@ -283,6 +494,18 @@ footer {
         width: 100%;
         margin: 0.25rem 0;
     }
+
+    .project-description {
+        font-size: 1.25rem;
+        line-height: 2.5rem;
+    }
+
+    /*
+    .img-ctn-med {
+        width: 100%;
+        margin: 1.5rem 0;
+    }
+*/
 }
 
 @media (max-width: 991.98px) {
@@ -294,6 +517,8 @@ footer {
 
     .copyright {
         text-align: center;
+        float: none;
+
     }
 
     .social-links {
@@ -303,6 +528,23 @@ footer {
     .footer-text {
         width: 100%;
         font-size: 1rem;
+    }
+
+    .project-section-sm {
+        width: 100%;
+        float: left;
+    }
+
+    .project-section-med {
+        margin: 50px 0 0 0;
+        width: 100%;
+        float: left;
+    }
+
+    .img-med {
+        width: 100%;
+        height: 700px;
+        margin: 2rem 0;
     }
 
 }
