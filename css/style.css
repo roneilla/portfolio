@@ -124,7 +124,7 @@ a:hover {
 
 .header-title {
     font-size: 2.5rem;
-    
+
 }
 
 .header-description {
@@ -297,7 +297,8 @@ footer {
     float: left;
 }
 
-#doodle-card, #doodle-img {
+#doodle-card,
+#doodle-img {
     height: 600px;
 }
 
@@ -356,7 +357,7 @@ footer {
 }
 
 .project-callout {
-    padding: 5rem 5rem;
+    padding: 5rem;
     margin: 3rem 0;
     /*    border: 5px #333 solid;*/
     /*    background-color: rgba(0, 0, 0, 0.1);*/
@@ -454,18 +455,18 @@ footer {
 }
 
 .clickable {
-     text-decoration: underline;
+    text-decoration: underline;
 }
 
 .clickable:hover {
-     color: #666;
-         text-decoration: underline;
+    color: #666;
+    text-decoration: underline;
 
 }
 
 .mobile-text {
-        display: none;
-    }
+    display: none;
+}
 
 
 /* Media Queries */
@@ -503,17 +504,21 @@ footer {
     footer {
         margin-top: 50px;
     }
-    
+
     .mobile-text {
         display: block;
     }
 
-/*
+    /*
     .card-img-overlay {
         opacity: 1;
         background: rgba(255, 255, 255, 0.3);
     }
 */
+    
+    .project-callout {
+         padding: 3rem;
+    }
 
 }
 
@@ -522,6 +527,7 @@ footer {
         margin: 5vh 0;
     }
 
+    
 }
 
 @media (max-width: 767.98px) {
