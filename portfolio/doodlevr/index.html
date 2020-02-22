@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+
+    <link rel="icon" href="images/googleG.png">
+    <title>Google</title>
+</head>
+
+<body>
+    <div id="nav-frame">
+        <div class="nav-left">
+            <div class="nav-item"><a href="https://www.google.com/intl/en/about/?fg=1&utm_source=google-CA&utm_medium=referral&utm_campaign=hp-header">About</a></div>
+            <div class="nav-item"><a href="https://store.google.com/?utm_source=hp_header&utm_medium=google_oo&utm_campaign=GS100042">Store</a></div>
+        </div>
+        <div class="nav-right">
+            <div class="nav-item"><a href="https://www.gmail.com">Gmail</a></div>
+            <div class="nav-item"><a href="https://images.google.com/">Images</a></div>
+            <div class="nav-grid"><i class="fas fa-th"></i></div>
+            <div class="nav-bell"><i class="fas fa-bell"></i></div>
+            <div class="nav-profile"><i class="fas fa-user-circle"></i></div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!--   ANYTHING A FRAME RELATED GOES IN HERE-->
+    <div class="googleContainer">
+        <a-scene embedded>
+
+            <a-assets>
+                <a-asset-item id="scene" src="models/testv5cityscape.dae"></a-asset-item>
+                <img id="thumbScene" crossOrigin="anonymous" src="images/googleScene.png">
+            </a-assets>
+
+            <a-camera position="0 0 0">
+
+                <a-cursor cursor="fuse: true" raycaster="objects: .clickable" position="0 0 -1" geometry="primitive:ring; radiusInner:0.05; radiusOuter:0.06" material="color:#ffffff; shader: flat">
+                    <a-animation begin="click" easing="ease-in" attribute="scale" fill="forwards" from="0.2 0.2 0.2" to="1 1 1" dur="150"></a-animation>
+                    <a-animation begin="fusing" easing="ease-in" attribute="scale" fill="backwards" from="1 1 1" to="0.2 0.2 0.2" dur="1500"></a-animation>
+                </a-cursor>
+            </a-camera>
+
+            <a-link href="scene.html" class="clickable" title="STARE AT THE PORTAL!" position="-2.75 0.1 -4.1" image="#thumbScene" scale="1 1 1">
+            </a-link>
+
+            <a-entity collada-model="#scene" position=".75 -4.25 -1"></a-entity>
+
+
+
+            <a-entity id="sky" geometry="primitive: sphere; radius: 65;" material="shader: flat; color: #000000; side: double"></a-entity>
+
+        </a-scene>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div id="search-bar">
+        <form action="https://www.google.com/search" class="searchform" method="get" name="searchform" target="_blank">
+            <input name="sitesearch" type="hidden" value="">
+            <input autocomplete="on" class="form-control search" name="q" placeholder="" type="text">
+
+            <div id="side-by-side">
+                <button type="submit" class="search-button">Google Search</button>
+                <button class="search-button">I'm Feeling Lucky</button>
+            </div>
+        </form>
+        <br>
+        <div class="under-input-bar">
+            <div class="text">Learn more about VR History <a href="https://www.google.ca/search?rlz=1C1CHBF_en-GBCA741CA741&ei=8pD-W5r3N-e6ggeLq6KoBA&q=history+of+VR&oq=history+of+VR&gs_l=psy-ab.3..35i39j0l4j0i20i263j0l4.2307.4591..4778...0.0..0.74.867.13......0....1..gws-wiz.......0i67j0i131j0i10i67j0i131i20i263j0i131i67.564dAngz4LU">here.</a></div>
+            <br><br><br>
+            <div class="text">Google Offered in: <a href="#">Français</a></div>
+        </div>
+    </div>
+
+    <div id="bottom-nav">
+        <div class="nav-left">
+            <div class="nav-item">Advertising</div>
+            <div class="nav-item">Business</div>
+        </div>
+        <div class="nav-right">
+            <div class="nav-item">Privacy</div>
+            <div class="nav-item">Terms</div>
+            <div class="nav-item">Settings</div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+<!--Google Template code retrieved from the website www.Google.com and recreated by Isabelle Vohsemer-->
+<link rel="stylesheet" href="css/style.css">

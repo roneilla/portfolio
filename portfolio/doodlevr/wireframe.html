@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+
+    <link rel="icon" href="images/googleG.png">
+    <title>Google</title>
+</head>
+
+<body>
+    <script>
+        AFRAME.registerComponent('auto-enter-vr', {
+            init: function() {
+                this.el.sceneEl.enterVR();
+            }
+        });
+
+    </script>
+     <a-scene auto-enter-vr>
+
+            <a-assets>
+                <a-asset-item id="scene" src="models/testv5cityscape.dae"></a-asset-item>
+                <img id="thumbScene" crossOrigin="anonymous" src="images/googleScene.png">
+            </a-assets>
+
+            <a-camera position="0 0 0">
+
+                <a-cursor cursor="fuse: true" raycaster="objects: .clickable" position="0 0 -1" geometry="primitive:ring; radiusInner:0.05; radiusOuter:0.06" material="color:#ffffff; shader: flat">
+                    <a-animation begin="click" easing="ease-in" attribute="scale" fill="forwards" from="0.2 0.2 0.2" to="1 1 1" dur="150"></a-animation>
+                    <a-animation begin="fusing" easing="ease-in" attribute="scale" fill="backwards" from="1 1 1" to="0.2 0.2 0.2" dur="1500"></a-animation>
+                </a-cursor>
+            </a-camera>
+
+            <a-link href="scene.html" class="clickable" title="STARE AT THE PORTAL!" position="-2.75 0.1 -4.1" image="#thumbScene" scale="1 1 1">
+            </a-link>
+
+            <a-entity collada-model="#scene" position=".75 -4.25 -1"></a-entity>
+
+
+
+            <a-entity id="sky" geometry="primitive: sphere; radius: 65;" material="shader: flat; color: #000000; side: double"></a-entity>
+
+        </a-scene>
+</body>
+
+</html>

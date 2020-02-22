@@ -1,0 +1,237 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+    <script src="https://pavle-goloskokovic.github.io/web-audio-touch-unlock-example/dist/web-audio-touch-unlock-example.js"></script>
+    <script src="js/howler.core.js"></script>
+    <link rel="icon" href="images/googleG.png">
+    <title>Happy 50 Years of VR!</title>
+</head>
+
+<body>
+   
+    <script>
+        AFRAME.registerComponent('auto-enter-vr', {
+            init: function() {
+                this.el.sceneEl.enterVR();
+            }
+        });
+    </script>
+    
+    <a-scene auto-enter-vr>
+
+
+        <a-assets>
+            <a-asset-item id="scene2" src="models/island.dae"></a-asset-item>
+            <a-asset-item id="firework" src="models/firework.dae"></a-asset-item>
+            <a-asset-item id="thumbScene" src="images/googleIndex.png"></a-asset-item>
+            <a-asset-item id="fireworkBox" src="models/Fbox.dae">
+            </a-asset-item>
+            <a-asset-item id="present" src="models/present.dae"></a-asset-item>
+            <a-asset-item id="sensorama" src="models/booth.dae"></a-asset-item>
+            <a-asset-item id="gogglesBrown" src="models/gogglesBrown.dae"></a-asset-item>
+            <a-asset-item id="gogglesGreen" src="models/gogglesGreen.dae"></a-asset-item>
+            <a-asset-item id="gogglesGrey" src="models/gogglesGrey.dae"></a-asset-item>
+            <a-asset-item id="gogglesWhite" src="models/gogglesWhite.dae"></a-asset-item>
+        </a-assets>
+
+
+        <!-- CURSOR-->
+        <a-camera>
+
+            <a-cursor cursor="fuse: true" raycaster="objects: .clickable" position="0 0 -1" geometry="primitive:ring; radiusInner:0.05; radiusOuter:0.06" material="color:#ffffff; shader: flat">
+
+                <a-animation begin="click" easing="ease-in" attribute="scale" fill="forwards" from="0.2 0.2 0.2" to="1 1 1" dur="150"></a-animation>
+                <a-animation begin="fusing" easing="ease-in" attribute="scale" fill="backwards" from="1 1 1" to="0.2 0.2 0.2" dur="1500"></a-animation>
+            </a-cursor>
+        </a-camera>
+
+        <!-- PORTAL (location: google logo)-->
+
+        <a-entity link="href: wireframe.html; title: Back to Google; image: #thumbScene; borderColor: #fbbc05; backgroundColor: red" position="-0.725 0.02 9.13" scale="0.75 0.75 0.75" rotation="0 0 0" class="clickable"></a-entity>
+
+        <!-- RED BALLOON -->
+        <a-sphere class="clickable" color="red" position="-6 2.5 -5.5" radius="0.75" sound="src: url(sound/pop.mp3); on: click">
+            <a-animation begin="click" attribute="radius" from="" to="1" dur="200" fill="both">
+            </a-animation>
+            <a-animation begin="click" attribute="opacity" from="100" to="0" dur="200" fill="both"></a-animation>
+        </a-sphere>
+
+        <a-box position="-6 1.68 -5.5" rotation="45 45 45" scale=".125 .125 .125" color="red"></a-box>
+
+        <a-cylinder color="white" position="-6 0.5 -5.5" radius="0.02" height="2.5">
+        </a-cylinder>
+
+        <!-- YELLOW BALLOON -->
+        <a-sphere class="clickable" color="yellow" position="0 2.78 -6.5" radius="0.75" sound="src: url(sound/pop2.mp3); on: click">
+            <a-animation begin="click" attribute="radius" from="" to="1" dur="200" fill="both"></a-animation>
+            <a-animation begin="click" attribute="opacity" from="100" to="0" dur="200" fill="both"></a-animation>
+        </a-sphere>
+
+        <a-box position="0 1.92 -6.5" rotation="45 45 45" scale=".125 .125 .125" color="yellow"></a-box>
+
+        <a-cylinder color="white" position="0 0.5 -6.5" radius="0.02" height="3">
+        </a-cylinder>
+
+        <!-- BLUE BALLOON  -->
+        <a-sphere class="clickable" color="blue" position="5 2.5 -5.5" radius="0.5" sound="src: url(sound/pop3.mp3); on: click">
+            <a-animation begin="click" attribute="radius" from="" to="1" dur="200" fill="both"></a-animation>
+            <a-animation begin="click" attribute="opacity" from="100" to="0" dur="200" fill="both"></a-animation>
+        </a-sphere>
+        <a-box position="5 1.92 -5.5" rotation="45 45 45" scale=".125 .125 .125" color="blue"></a-box>
+        <a-cylinder color="white" position="5 0.5 -5.5" radius="0.02" height="3">
+        </a-cylinder>
+
+
+        <!-- SENSORAMA TEXT -->
+        <a-plane position="5.5 1.63 1.167" rotation="0 -115 0" height="1" width="2.5" color="#000" opacity="0.2" visible="false" id="sensText">
+            <a-text value="The Sensorama was" position="-1.03  0.134 0.066" color="white">
+                <a-text value="the first VR machine!" position="0 -0.25 0" rotation="0 0 0" color="white"></a-text>
+            </a-text>
+        </a-plane>
+
+        <!-- HIDDEN TEXT-->
+
+        <a-plane position="4.1 -0.27 -3.41" rotation="0 -60 0" color="blue" opacity="0.6" width="2.25" visible="false" id="surprise">
+            <a-entity text="anchor: align; width: 2; value: hi breck pls give us a gr8 mark we worked rlly hard on this! love, the insane group; wrapCount: 20" position="-0.98 0 0.003"></a-entity>
+        </a-plane>
+
+        <a-plane position="2.751 0.5 -3.383" rotation="0 -35 0" color="red" opacity="0.6" width="2.25" visible="false" id="challenge">
+            <a-entity text="anchor: align; width: 2; value: Challenge for desktop users! Find all 5 VR goggles in the scene!; wrapCount: 20" position="-0.88 0 0.003"></a-entity>
+        </a-plane>
+
+
+        <!-- COLLADA MODELS-->
+
+        <a-collada-model src="#gogglesBrown" position="-16.7 0 -11.128" rotation="0 45 0" scale="1.25 1.25 1.25" class="clickable" id="brownGogs">
+        </a-collada-model>
+
+        <a-collada-model src="#gogglesGreen" position="0 -1.193 12.186" rotation="0 0 0" scale="1.25 1.25 1.25" class="clickable" id="greenGogs">
+        </a-collada-model>
+
+        <a-collada-model src="#gogglesGrey" position="2.751 -1.349 -3.383" rotation="-82.811 0 0" scale="1.25 1.25 1.25" class="clickable" id="greyGogs">
+        </a-collada-model>
+
+        <a-collada-model src="#gogglesWhite" position="-4.644 28.142 0" rotation="-89.182 0 0" scale="9.863 9.863 9.863" class="clickable" id="whiteGogs">
+        </a-collada-model>
+
+
+        <a-collada-model src="#sensorama" position="5.5 -1.25 1.6" rotation="0 -15 0" scale="1.25 1.25 1.25" id="sensoramaBox" class="clickable">
+            <!-- PORTAL (Location: sensorama)-->
+            <a-entity link="href: wireframe.html; title: Sensorama; backgroundColor: #000; image: #thumbScene; borderColor: black;" position="-0.11 1.158 -0.36" scale=".1 .1 .1" rotation="45 85 0" class="clickable"></a-entity>
+        </a-collada-model>
+
+        <a-collada-model src="#fireworkBox" position="-5.54 -1.72 -2.81" rotation="0 45 0" scale=".5 .5 .5" id="fBox" class="clickable">
+            <a-collada-model src="#firework" position="0.293 0.555 0.4755" rotation="0 0 -0" scale="1 1 1" id="fireworkCyl">
+                <a-animation begin="move" attribute="position" from="0.293 0.555 0.4755" to="0.293 20 0.4755" dur="2000" fill="both">
+                </a-animation>
+                <a-animation begin="move" attribute="scale" from="" to="0 0 0" dur="2000" fill="both"></a-animation>
+                <a-animation begin="move" attribute="opacity" from="100" to="0" dur="2000" fill="both"></a-animation>
+                <a-animation begin="move" attribute="visible" from="true" to="false" dur="2000" fill="both"></a-animation>
+            </a-collada-model>
+        </a-collada-model>
+
+        <a-entity particle-system="color: yellow, yellow; maxParticleCount: 100;" position="-5.54 10 -2.81" rotation="0 180 0" id="fireworkSparks" visible="false"></a-entity>
+
+        <a-collada-model src="#present" position="5 -1.35 -3.54" rotation="0 45 0" scale="1.25 1.25 1.25" class="clickable" id="presentBox">
+        </a-collada-model>
+
+        <a-collada-model src="#scene2" position="-10 -1.5 -13.5" rotation="0 0 -0" scale="2 2 2">
+        </a-collada-model>
+
+
+        <a-sky color="#81f5ff"></a-sky>
+        <!--        <a-sound src="src: url(sound/soundtrack.mp3)" volume="0.2" autoplay="true" position="0 0 0"></a-sound>-->
+
+    </a-scene>
+
+    <script>
+        //fireworks
+        var fireSpark = document.querySelector("#fireworkSparks");
+        var fireCyl = document.querySelector("#fireworkCyl");
+        var fireBox = document.querySelector("#fBox");
+
+        fireBox.addEventListener("click", function() {
+
+            fireCyl.emit('move');
+
+            setTimeout(function() {
+                console.log("firework clicked");
+                fireSpark.setAttribute('visible', true);
+            }, 400);
+
+            setTimeout(function() {
+                console.log("firework off");
+                fireSpark.setAttribute('visible', false);
+            }, 4000);
+
+        });
+
+        //sensorama
+        var sensBox = document.querySelector("#sensoramaBox");
+        var sensoText = document.querySelector("#sensText");
+
+
+        sensBox.addEventListener("click", function() {
+            sensoText.setAttribute('visible', true);
+        });
+
+
+        //surprise for Breck :))
+        var giftBox = document.querySelector("#presentBox");
+        var surpriseMessage = document.querySelector("#surprise");
+
+        giftBox.addEventListener("click", function() {
+            console.log("thx breck");
+            surpriseMessage.setAttribute('visible', true);
+
+
+            setTimeout(function() {
+                surpriseMessage.setAttribute('visible', false);
+
+            }, 5000);
+        });
+
+
+        // goggles animation
+
+        var gogsGrey = document.querySelector("#greyGogs");
+        var challengeMessage = document.querySelector("#challenge");
+
+
+
+        gogsGrey.addEventListener("click", function() {
+
+            challengeMessage.setAttribute('visible', true);
+
+            setTimeout(function() {
+                challengeMessage.setAttribute('visible', false);
+
+            }, 5000);
+        });
+
+//         SOUND
+
+                Howler.autoUnlock = false;
+        
+        
+        
+                var sound = new Howl({
+                    src: ['sound/soundtrack.mp3'],
+                    onplayerror: function() {
+                        sound.once('unlock', function() {
+                            sound.play();
+                        });
+                    }
+                });
+        
+                sound.play();
+
+
+    </script>
+</body>
+
+</html>

@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="css/style.css">
     <script>
         new WOW().init();
-
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155859674-1"></script>
@@ -24,7 +23,6 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-155859674-1');
-
     </script>
 </head>
 
@@ -102,23 +100,39 @@
                     In the end, I couldn’t quite get the result I was hoping for due to it not being a function that is available or suitable for a mobile device. But I ended up recreating the effect in a simpler way without taking away the magic of VR.
                 </div>
             </div>
-            <div class="project-section">
-                <h2 class="project-section-sm section-title text-mono">Final Product</h2>
-                <div class="project-section-med section-paragraph">My biggest breakthrough: clickable objects. One of the interactions I wanted to add to the environment was clickable objects. I spent hours reading the documentation, doing researching, and experimenting in order to get it working the way I wanted it to. I was an amateur coder with little JavaScript experience and no A-Frame experience, so it was quite a challenge.
-                    <br>
-                    <br>
-                    After many experiments, I found that when objects are imported separately from the scene, they can be called on as objects in JavaScript. Add an event listener here, and an effect there, and we got clickable objects!
-                    <h4 class="section-subheading text-mono-bold">Reflection</h4>
-                    Before this project, I had minimal experience with JavaScript. I didn’t fully understand how it all worked. I learned how various parts of JavaScript work, as well as how to properly organize code in order to make my workflow more efficient.
-                </div>
+            <div class="project-section center">
+                <a href="portfolio/doodlevr/" >
+                    <div class="card" id="doodle-card">
+                        <img src="assets/img/doodle-final-1.jpg" alt="" class="img-ctn" id="doodle-img">
+                        <div class="card-img-overlay" id="doodle-overlay" style="text-decoration: underline;">
+                            Click to experience &nearr;
+                        </div>
+                    </div>
+                </a>
+                <a href="portfolio/doodlevr/" class="center clickable mobile-text">Click to experience &nearr;</a>
             </div>
-            <!--
+
+        </div>
+        <div class="project-section">
+            <h2 class="project-section-sm section-title text-mono">Final Product</h2>
+            <div class="project-section-med section-paragraph">
+                My biggest breakthrough: clickable objects. One of the interactions I wanted to add to the environment was clickable objects. I spent hours reading the documentation, doing researching, and experimenting in order to get it working the way I wanted it to. I was an amateur coder with little JavaScript experience and no A-Frame experience, so it was quite a challenge.
+                <br>
+                <br>
+                After many experiments, I found that when objects are imported separately from the scene, they can be called on as objects in JavaScript. Add an event listener here, and an effect there, and we got clickable objects!
+                <h4 class="section-subheading text-mono-bold">Reflection</h4>
+                Before this project, I had minimal experience with JavaScript. I didn’t fully understand how it all worked. I learned how various parts of JavaScript work, as well as how to properly organize code in order to make my workflow more efficient.
+
+            </div>
+        </div>
+
+        <!--
             <div class="project-section">
                 <h2 class="project-section-sm section-title text-mono-bold">Title</h2>
                 <div class="project-section-med section-paragraph">Description</div>
             </div>
 -->
-        </div>
+
         <footer>
             <div class="footer-section">
                 <p class="footer-text">I'm always up for a chat! If you wanna talk ESP8266, P5js, or how iced coffee is superior to hot coffee, don't hesitate to reach out!</p>
@@ -144,6 +158,4 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-</body>
-
-</html>
+</body></html>

@@ -24,7 +24,7 @@ h1 {
 
 h2 {
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 h3 {
@@ -62,6 +62,9 @@ p {
     font-weight: 700;
 }
 
+.center {
+    text-align: center;
+}
 
 /*
 #sketch-container {
@@ -116,20 +119,22 @@ a:hover {
 */
     margin: 5vh 0;
     color: #000;
+    font-weight: 300;
 }
 
 .header-title {
     font-size: 2.5rem;
-    font-weight: 400;
+    
 }
 
 .header-description {
-    font-size: 1.25rem;
-    margin: 2.5rem 0 0.5rem 0;
+    font-size: 1.5rem;
+    margin: 1rem 0 3rem 0;
 }
 
 .header-link {
     font-size: 1.25rem;
+    margin: 1rem 0;
 }
 
 .header-link:hover {
@@ -149,6 +154,7 @@ a:hover {
     width: 100%;
     float: left;
     margin: 1rem 0;
+    font-weight: 300;
 }
 
 .filter-option {
@@ -170,7 +176,8 @@ a:hover {
 }
 
 .filter-option.active {
-    font-weight: 700;
+    font-weight: 400;
+    text-decoration: underline;
     color: #000;
 }
 
@@ -218,6 +225,10 @@ a:hover {
     transition: .5s ease-in-out;
 }
 
+#doodle-overlay {
+    padding: 30% 0;
+}
+
 /* Footer */
 
 .footer-text {
@@ -239,6 +250,7 @@ a:hover {
     margin-top: 20px;
     text-align: right;
     float: right;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .social-icon {
@@ -285,6 +297,10 @@ footer {
     float: left;
 }
 
+#doodle-card, #doodle-img {
+    height: 600px;
+}
+
 .img-ctn {
     width: 100%;
     object-fit: contain;
@@ -305,7 +321,6 @@ footer {
     float: left;
     margin: 1.5rem 25%;
 }
-
 
 .img-ctn-sm {
     width: 20%;
@@ -444,7 +459,15 @@ footer {
 
 .clickable:hover {
      color: #666;
+         text-decoration: underline;
+
 }
+
+.mobile-text {
+        display: none;
+    }
+
+
 /* Media Queries */
 @media (max-width: 575.98px) {
     .header-container {
@@ -480,11 +503,17 @@ footer {
     footer {
         margin-top: 50px;
     }
+    
+    .mobile-text {
+        display: block;
+    }
 
+/*
     .card-img-overlay {
         opacity: 1;
         background: rgba(255, 255, 255, 0.3);
     }
+*/
 
 }
 
