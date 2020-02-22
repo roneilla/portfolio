@@ -418,7 +418,7 @@ footer {
 /* Info page */
 
 .about-container {
-    padding-top: 4rem;
+    margin-top: 50px;
     width: 100%;
     float: left;
 }
@@ -438,6 +438,13 @@ footer {
     font-weight: 300;
 }
 
+.clickable {
+     text-decoration: underline;
+}
+
+.clickable:hover {
+     color: #666;
+}
 /* Media Queries */
 @media (max-width: 575.98px) {
     .header-container {
