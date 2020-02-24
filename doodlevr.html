@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Roneilla Bumanlag</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
@@ -29,15 +31,21 @@
 <body>
     <div class="container">
         <div class="nav-bar">
-            <div class="nav-option left-nav"><a href="index.html">RB</a></div>
-            <div class="nav-option right-nav"><a href="info.html">Info</a></div>
+            <div class="nav-option left-nav desktop-nav"><a href="index.html">Roneilla Bumanlag</a></div>
+            <div class="nav-option left-nav mobile-nav"><a href="index.html">RB</a></div>
+            <div class="nav-option right-nav">
+                <ul>
+                    <li><a href="index.html">Work</a></li>
+                    <li><a href="lab.html">Lab</a></li>
+                    <li><a href="info.html">Info</a></li>
+                </ul>
+            </div>
         </div>
-
         <div class="project-wrapper">
             <img src="assets/doodlvr.jpg" alt="" class="img">
             <div class="project-header-wrapper">
                 <div class="project-section-sm">
-                    <h4 class="text-mono-up">¬ Design <br> ¬ Experience</h4>
+
                     <div class="project-details text-mono">
                         <h4 class="text-mono-bold"> Timeline </h4>
                         <p>November 2018 (10 weeks)</p>
@@ -51,6 +59,7 @@
                 </div>
                 <div class="project-section-med">
                     <h1 class="project-header-title">Google Doodle VR</h1>
+                    <h4 class="text-mono-up"> Design, Experience</h4>
                     <div class="project-description">
                         We were tasked with creating an interactive Google Doodle. Taking inspiration from doodles created by Google over the years, we decided to take it a step further and create an immersive, virtual reality experience celebrating the 50 years of VR.
                     </div>
@@ -68,21 +77,29 @@
                     <br><br>
                     The first ever VR device was a sensorama, which was a big bulky machine that displayed wireframes. Currently, VR can be experiences using devices as small as a phone. Users can use it for anything ranging from immersive 3d models to full gameplay experiences.</div>
             </div>
+            <div class="project-callout">
+                <div class="callout-title text-mono-up">Solution</div>
+                <div class="callout-heading">
+                    We created an interactive VR google doodle that celebrates the 50 years of Virtual Reality.
+                </div>
+            </div>
             <div class="project-section">
                 <h2 class="project-section-sm section-title text-mono">Ideation</h2>
                 <div class="project-section-med section-paragraph">We decided to create an virtual reality experience celebrating the 50 year anniversary of VR. While we were asked to create a 2D Google Doodle, but we decided to create a 3D virtual reality experience in order to fully convey the meaning of virtual reality.
                     <br><br>
-                    Virtual reality is one of the most innovative inventions of technology so far. It was only recently made accessible, VR has been around for a while! We decided to commemorate it’s 50th anniversary.</div>
-            </div>
-            <div class="project-callout">
-                <div class="callout-title text-mono-up">Solution</div>
-                <div class="callout-heading">
-                    We decided to create an interactive VR google doodle that celebrates the 50 years of Virtual Reality.
+                    Virtual reality is one of the most innovative inventions of technology so far. It was only recently made accessible, VR has been around for a while! We decided to commemorate it’s 50th anniversary.
+                    <h4 class="section-subheading text-mono-bold">Conceptual</h4>
+                    We brainstormed many ideas for the experience and we landed with the following: <br>
+                    ¬ Walkable environment <br>
+                    ¬ Birthday party (for VR) <br>
+                    ¬ Walkable wirframe environment (to show history of VR)
                 </div>
             </div>
+            <img src="assets/img/doodle-ideation-1.png" alt="" class="img-ctn">
             <div class="project-section">
                 <h2 class="project-section-sm section-title text-mono">Development</h2>
-                <div class="project-section-med section-paragraph">Our biggest obstacle: we didn’t know how to create virtual reality experiences. Through hours of research and mentoring from an upper year IXD student, we found A-Frame.
+                <div class="project-section-med section-paragraph">
+                    Our biggest obstacle: we didn’t know how to create virtual reality experiences. Through hours of research and mentoring from an upper year IXD student, we found A-Frame.
                     <br>
                     <br>
                     A-Frame is a JavaScript framework that simplifies and minimizes the code needed to create virtual reality experiences for web-based programs. While my team got to work on modelling the 3d environment, I started to explore and learn the new framework and create some test environments.
@@ -101,10 +118,15 @@
                 </div>
             </div>
             <div class="project-section center">
-                <a href="portfolio/doodlevr/" >
+                <a href="portfolio/doodlevr/">
                     <div class="card" id="doodle-card">
-                        <img src="assets/img/doodle-final-1.jpg" alt="" class="img-ctn" id="doodle-img">
-                        <div class="card-img-overlay" id="doodle-overlay" style="text-decoration: underline;">
+                        <img src="assets/img/doodle-final-1.jpg" alt="" class="img-cvr" id="doodle-img">
+                        <div class="card-img-overlay" id="doodle-overlay">
+                            <div class="text">
+                                Click to experience &nearr;
+                            </div>
+                        </div>
+                        <div class="mobile-text">
                             Click to experience &nearr;
                         </div>
                     </div>
@@ -116,23 +138,24 @@
         <div class="project-section">
             <h2 class="project-section-sm section-title text-mono">Final Product</h2>
             <div class="project-section-med section-paragraph">
+                The final experience consisted of two scenes. The first scene is a wireframe environment on a Google landing page. The second scene is a low-poly environment. It represents virtual reality's 50th birthday. There are models of VR goggles spread throughout the environment, which creates a fun experience for users on desktop.
+                <br><br>
+                <img src="assets/img/doodle-final-3.png" alt="" class="img-ctn-med-ctr">
+                 To the left is a small box of fireworks. After the user gazes at the firework for a few seconds, this will emit an effect which "launches" the fireworks and triggers an explosion. Gazing on the balloons on top of the text will trigger their explosion.
+                <br><br>
+                <img src="assets/img/doodle-final-2.png" alt="" class="img-ctn-med-ctr">
+                To the right is a sensorama. This is a tribute to the first VR machine. There are two interactions attached to the sensorama. If the user gazes over, a text box with a brief description of the sensorama will appear. If the user approaches it, they will see a dark screen. After a few seconds of gazing into the sensorama, the user will be lead to the wireframe environment (representing what you would see if you looked into a real sensorama).
+                <br><br>
                 My biggest breakthrough: clickable objects. One of the interactions I wanted to add to the environment was clickable objects. I spent hours reading the documentation, doing researching, and experimenting in order to get it working the way I wanted it to. I was an amateur coder with little JavaScript experience and no A-Frame experience, so it was quite a challenge.
                 <br>
                 <br>
                 After many experiments, I found that when objects are imported separately from the scene, they can be called on as objects in JavaScript. Add an event listener here, and an effect there, and we got clickable objects!
                 <h4 class="section-subheading text-mono-bold">Reflection</h4>
                 Before this project, I had minimal experience with JavaScript. I didn’t fully understand how it all worked. I learned how various parts of JavaScript work, as well as how to properly organize code in order to make my workflow more efficient.
-
+                <br><br>
+                Later in the next semester, I created a beginner tutorial to A-Frame and creating interactive environments. If you want to learn more, <a href="mailto:roneillabumanlag@gmail.com" class="clickable">send me an email</a>!
             </div>
         </div>
-
-        <!--
-            <div class="project-section">
-                <h2 class="project-section-sm section-title text-mono-bold">Title</h2>
-                <div class="project-section-med section-paragraph">Description</div>
-            </div>
--->
-
         <footer>
             <div class="footer-section">
                 <p class="footer-text">I'm always up for a chat! If you wanna talk ESP8266, P5js, or how iced coffee is superior to hot coffee, don't hesitate to reach out!</p>
@@ -157,5 +180,6 @@
         </footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body></html>

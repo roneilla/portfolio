@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Roneilla Bumanlag</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <script>
         new WOW().init();
-
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155859674-1"></script>
@@ -24,36 +25,43 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-155859674-1');
-
     </script>
 </head>
 
 <body>
     <div class="container">
         <div class="nav-bar">
-            <div class="nav-option left-nav"><a href="index.html">RB</a></div>
-            <div class="nav-option right-nav"><a href="info.html">Info</a></div>
+            <div class="nav-option left-nav desktop-nav"><a href="index.html">Roneilla Bumanlag</a></div>
+            <div class="nav-option left-nav mobile-nav"><a href="index.html">RB</a></div>
+            <div class="nav-option right-nav">
+                <ul>
+                    <li><a href="index.html">Work</a></li>
+                    <li><a href="lab.html">Lab</a></li>
+                    <li><a href="info.html">Info</a></li>
+                </ul>
+            </div>
         </div>
 
         <div class="project-wrapper">
             <img src="assets/bridge.jpg" alt="" class="img">
             <div class="project-header-wrapper">
                 <div class="project-section-sm">
-                    <h4 class="text-mono-up">¬ Design<br>¬ Research</h4>
+
                     <div class="project-details text-mono">
                         <h4 class="text-mono-bold"> Timeline </h4>
                         <p>January 2020 (1 week)</p>
                         <h4 class="text-mono-bold"> Role </h4>
-                        <p>UX Designer<br>
-                            UX Researcher</p>
+                        <p>UX/UI Design<br>
+                            UX Research</p>
                         <h4 class="text-mono-bold"> Tools </h4>
                         <p>Adobe XD</p>
                     </div>
                 </div>
                 <div class="project-section-med">
                     <h1 class="project-header-title">Bridge</h1>
+                    <h4 class="text-mono-up">Design, Research</h4>
                     <div class="project-description">
-                        A 2-week research project where I lead the exploration of the capabilities of ARjs. The research will be used in the creation and development of an interactive transmedia mural to be installed at the Trafalgar Road campus of Sheridan College.
+                        Creating a thoughtful experience to strengthen the community by connecting students and improving campus life.
                     </div>
                 </div>
             </div>
@@ -111,7 +119,7 @@
                     <img src="assets/img/bridge-ideation-2.jpg" alt="" class="img-ctn">
                     The features I previously brainstormed gave me a clear idea of what the user journey was going to be like, after a few iterations, this is the final version I decided to move from.
                     <h4 class="section-subheading text-mono-bold">User Flows</h4>
-                    <img src="assets/img/bridge-ideation-3.jpg" alt="" class="img-ctn">
+                    <img src="assets/img/bridge-ideation-3.jpg" alt="" class="img-ctn-med-ctr">
                     Creating the user journey map gave me a better understanding on how the user flow should go.
                     <br>
                     The sitemap (in blue pen) lists the pages I need to create for the app.
@@ -138,7 +146,6 @@
             <div class="project-section">
                 <h2 class="project-section-sm section-title text-mono">Final Product</h2>
                 <div class="project-section-med section-paragraph">Bridge is an app that serves as the hub for creating and nurturing connections between mentors and mentees.
-                    <br><br>
                     It utilizes questionnaires, information hierarchy, and messaging to improve social interactions between mentors and mentees.
                     <br><br>
                     A detailed, research-based questionnaire will be used in order to create better matches for the users. There will also be events and groups pages to promote social interactions. Each mentor-mentee conversation will be given a prompt of the week to encourage regular interactions between users.
@@ -157,38 +164,22 @@
                             <img src="assets/img/bridge-final-5.jpg" alt="" class="img-ctn">
                         </div>
                     </div>
-                    The 3 tabs (Mentors, Events, Groups) on the Discover page will be utilizing cards components. I experimented with different layouts to see which would work best for information hierarchy.<br><br>
-                    I found that the card below (1.1) works best because it clearly divides each piece of information: name, description, tags, and the buttons.<br><br>
-                    The other cards didn’t work because some were imbalanced, didn’t have a good flow, or didn’t display information that were necessary.
+                    The 3 tabs (Mentors, Events, Groups) on the Discover page will be utilizing cards components. I experimented with different layouts to see which would work best for information hierarchy. I found that the card above works best because it clearly divides each piece of information: name, description, tags, and the buttons. The other cards didn’t work because some were imbalanced, didn’t have a good flow, or didn’t display information that were necessary.
                     <h4 class="section-subheading text-mono-bold">Tags</h4>
                     <img src="assets/img/bridge-final-6.jpg" alt="" class="img-ctn-med-ctr">
-                    Mentors and mentees will both be asked the same questions for “Interests and Hobbies”. This will be an important part for the accuracy of matchmaking.<br><br>
-                    There will be predetermined tags, but users will also be given a choice to add their own. This will give users more control with the tags they add to their profile. Adding more tags can will also ensure better matches.<br><br>
-                    The green tags are clicked states and the grey tags are the unselected states.
+                    Mentors and mentees will both be asked the same questions for “Interests and Hobbies”. This will be an important part for the accuracy of matchmaking. There will be predetermined tags, but users will also be given a choice to add their own. This will give users more control with the tags they add to their profile. Adding more tags can will also ensure better matches. The green tags are clicked states and the grey tags are the unselected states.
                     <h4 class="section-subheading text-mono-bold">Mentor Results</h4>
                     <img src="assets/img/bridge-final-7.jpg" alt="" class="img-ctn-med-ctr">
                     After the mentee completes the questionnaire, they will have access to all the top-level pages. The first page after the form will be the Discover Mentors page. It is going to be a list of recommended mentors for matches, according to their answers.<br><br>
-                    The card will reveal the name and the headline of the mentor. The three tags shown will be the specialties they can help the mentee with. The tags displayed will be according to the questions.<br><br>
-                    Users are given a large, high contrast button for sending requests. They are also given an option to delete, to give them more control over their feed.
+                    The card will reveal the name and the headline of the mentor. The three tags shown will be the specialties they can help the mentee with. The tags displayed will be according to the questions. Users are given a large, high contrast button for sending requests. They are also given an option to delete, to give them more control over their feed.
                     <h4 class="section-subheading text-mono-bold">Events + Groups</h4>
                     <img src="assets/img/bridge-final-8.jpg" alt="" class="img-ctn-med-ctr">
-                    The other tabs will be Events and Groups. One of the categories that students feel they were not successful in were taking part in campus events. By adding an events page, the app can help promote events that are suitable for the student’s interests.<br><br>
-                    There will also be a groups tab, which will be groups created by students. It will also be recommended based on the student’s interests.<br><br>
-                    Both tabs will also use the same card layout as the recommended mentors page in order to keep the consistency.
+                    The other tabs will be Events and Groups. One of the categories that students feel they were not successful in were taking part in campus events. By adding an events page, the app can help promote events that are suitable for the student’s interests. There will also be a groups tab, which will be groups created by students. It will also be recommended based on the student’s interests. Both tabs will also use the same card layout as the recommended mentors page in order to keep the consistency.
                     <h4 class="section-subheading text-mono-bold">Prompt of the Week</h4>
                     <img src="assets/img/bridge-final-9.jpg" alt="" class="img-ctn-med-ctr">
-                    Once a mentor and mentee has matched, they will be able to communicate to each other through the platform. To encourage regular communication, there will be a prompt of the week provided every week.<br><br>
-                    Each prompt will be a question or a phrase that will help the students get to know each other and build a stronger connection.
-
+                    Once a mentor and mentee has matched, they will be able to communicate to each other through the platform. To encourage regular communication, there will be a prompt of the week provided every week. Each prompt will be a question or a phrase that will help the students get to know each other and build a stronger connection.
                 </div>
-
             </div>
-            <!--
-            <div class="project-section">
-                <h2 class="project-section-sm section-title text-mono-bold">Title</h2>
-                <div class="project-section-med section-paragraph">Description</div>
-            </div>
--->
         </div>
         <footer>
             <div class="footer-section">
@@ -214,7 +205,6 @@
         </footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-</body>
-
-</html>
+</body></html>

@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
-
     <title>Roneilla Bumanlag</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
@@ -30,26 +31,50 @@
 
 <body>
     <div class="container">
-        <div class="nav-bar">
-            <div class="nav-option left-nav"><a href="index.html">RB</a></div>
-            <div class="nav-option right-nav"><a href="info.html">Info</a></div>
+       <div class="nav-bar">
+            <div class="nav-option left-nav desktop-nav"><a href="index.html">Roneilla Bumanlag</a></div>
+            <div class="nav-option left-nav mobile-nav"><a href="index.html">RB</a></div>
+            <div class="nav-option right-nav">
+                <ul>
+                    <li><a href="index.html">Work</a></li>
+                    <li><a href="lab.html">Lab</a></li>
+                    <li><a href="info.html">Info</a></li>
+                </ul>
+            </div>
         </div>
 
         <div class="header-container">
-<!--                        <div class="header-description">Roneila Bumanlag &mdash; Interaction Designer</div>-->
+            <!--                        <div class="header-description">Roneila Bumanlag &mdash; Interaction Designer</div>-->
             <div class="header-title">Hi, I'm Roneilla. I'm an Interaction Designer based in Toronto.</div>
             <div class="header-description">Looking for internship opportunities for summer 2020!</div>
             <div class="header-link text-mono-up"><a href="mailto:roneillabumanlag@gmail.com">Get in touch &rarr;</a></div>
         </div>
 
         <div class="work-wrapper">
-            <h2>Selected Work (2018 - 2020)</h2>
+            <h2>Selected Work</h2>
             <div class="filter-menu" id="filter-menu">
                 <div class="filter-option active" onclick="filterSelection('all')">All </div>
-                <!--                <div class="filter-option" onclick="filterSelection('build')">Build</div>-->
                 <div class="filter-option" onclick="filterSelection('design')">Design</div>
                 <div class="filter-option" onclick="filterSelection('experience')">Experience</div>
                 <div class="filter-option" onclick="filterSelection('research')">Research</div>
+            </div>
+            <div class="work-section experience">
+                <a href="doodlevr.html">
+                    <div class="card bg-dark text-dark">
+                        <img src="assets/doodlvr.jpg" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <h5 class="text-mono card-title text-left card-left">Doodle VR
+                            </h5>
+                            <h5 class="text-mono card-title text-right card-left">2018</h5>
+                        </div>
+                        <div class="mobile-text">
+                            <div class="mobile-text-left">Doodle VR</div>
+                            <div class="mobile-text-right">
+                                2018
+                            </div>
+                        </div>
+                    </div>
+                </a>
             </div>
             <div class="work-section design research">
                 <a href="bridge.html">
@@ -59,6 +84,12 @@
                             <h5 class="text-mono card-title text-left card-left">Bridge
                             </h5>
                             <h5 class="text-mono card-title text-right card-left">2020</h5>
+                        </div>
+                        <div class="mobile-text">
+                            <div class="mobile-text-left">Bridge</div>
+                            <div class="mobile-text-right">
+                                2020
+                            </div>
                         </div>
                     </div>
                 </a>
@@ -72,21 +103,16 @@
                             </h5>
                             <h5 class="text-mono card-title text-right card-left">2019</h5>
                         </div>
-                    </div>
-                </a>
-            </div>
-            <div class="work-section experience">
-                <a href="doodlevr.html">
-                    <div class="card bg-dark text-dark">
-                        <img src="assets/doodlvr.jpg" class="card-img" alt="...">
-                        <div class="card-img-overlay">
-                            <h5 class="text-mono card-title text-left card-left">Doodle VR
-                            </h5>
-                            <h5 class="text-mono card-title text-right card-left">2018</h5>
+                        <div class="mobile-text">
+                            <div class="mobile-text-left">Interactive Mural</div>
+                            <div class="mobile-text-right">
+                                2019
+                            </div>
                         </div>
                     </div>
                 </a>
             </div>
+
         </div>
         <footer>
             <div class="footer-section">
@@ -113,5 +139,6 @@
     </div>
     <script src="js/filter-menu.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body></html>

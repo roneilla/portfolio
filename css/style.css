@@ -95,6 +95,16 @@ p {
     float: right;
 }
 
+.right-nav ul {
+    display: inline-block;
+}
+
+.right-nav ul li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+
 a {
     text-decoration: none;
     color: #000;
@@ -133,7 +143,7 @@ a:hover {
 }
 
 .header-link {
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin: 1rem 0;
 }
 
@@ -181,7 +191,16 @@ a:hover {
     color: #000;
 }
 
+.mobile-text-left {
+    float: left;
+}
+
+.mobile-text-right {
+    float: right;
+}
+
 .card {
+    width: 100%;
     border: 0;
     height: 500px;
     object-fit: contain;
@@ -214,19 +233,30 @@ a:hover {
     transition: 0.5 ease-in-out;
 }
 
+.lab-section {
+    display: none;
+}
+
+.lab-section-show {
+    display: block;
+    transition: 0.5 ease-in-out;
+}
+
 .card-img-overlay {
     opacity: 0;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(47, 208, 154, 0.7);
+    transition: .5s ease-in-out;
+}
+
+.card-img-overlay-lab {
+    opacity: 0;
+    background: rgba(47, 208, 154, 0.7);
     transition: .5s ease-in-out;
 }
 
 .card:hover .card-img-overlay {
     opacity: 1;
     transition: .5s ease-in-out;
-}
-
-#doodle-overlay {
-    padding: 30% 0;
 }
 
 /* Footer */
@@ -286,7 +316,7 @@ footer {
     object-fit: cover;
     height: 500px;
     float: left;
-    margin: 3rem 0;
+    margin-bottom: 3rem;
 }
 
 .img-med {
@@ -300,6 +330,18 @@ footer {
 #doodle-card,
 #doodle-img {
     height: 600px;
+}
+
+#doodle-overlay {
+    margin: 1.5rem 0;
+    height: 600px;
+}
+
+.img-cvr {
+    width: 100%;
+    object-fit: cover;
+    float: left;
+    margin: 1.5rem 0;
 }
 
 .img-ctn {
@@ -316,6 +358,14 @@ footer {
     margin: 1.5rem 0;
 }
 
+.img-ctn-header {
+    width: 100%;
+    object-fit: cover;
+    height: 400px;
+    float: left;
+    margin: 1.5rem 0;
+}
+
 .img-ctn-med-ctr {
     width: 50%;
     object-fit: contain;
@@ -327,7 +377,7 @@ footer {
     width: 20%;
     object-fit: contain;
     float: left;
-    margin: 1.5rem 2%;
+    margin: 1.5rem 2.5%;
 }
 
 .project-header-wrapper {
@@ -346,21 +396,27 @@ footer {
 }
 
 .project-section-sm {
-    width: 25%;
+    width: 30%;
     float: left;
 }
 
 .project-section-med {
     margin-left: 5%;
-    width: 70%;
+    width: 65%;
     float: left;
+}
+
+.project-section {
+    width: 100%;
+    float: left;
+    margin: 50px 0;
 }
 
 .project-callout {
     padding: 5rem;
     margin: 3rem 0;
-    /*    border: 5px #333 solid;*/
-    /*    background-color: rgba(0, 0, 0, 0.1);*/
+    border: 1px #333 solid;
+    background-color: rgba(0, 0, 0, 0.05);
     float: left;
     color: #333;
 }
@@ -386,7 +442,7 @@ footer {
     font-weight: 300;
 }
 
-.project-section {
+.project-section-wrapper {
     margin: 50px 0;
     float: left;
     width: 100%;
@@ -395,7 +451,7 @@ footer {
 
 .section-paragraph {
     font-size: 1.25rem;
-    line-height: 3.5rem;
+    line-height: 2.5rem;
     font-weight: 300;
 }
 
@@ -468,15 +524,40 @@ footer {
     display: none;
 }
 
+/* Lab */
+
+.card-lab,
+.card-img-lab {
+    height: 300px;
+}
+
+.card-img-top {
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-img-overlay .text {
+    color: #101010;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#filter-menu-lab {
+    margin-bottom: 2rem;
+}
+
 
 /* Media Queries */
 @media (max-width: 575.98px) {
     .header-container {
-        margin: 10vh 0;
-    }
-
-    .header-link {
-        font-size: 1rem;
+        margin: 5vh 0;
     }
 
     .header-title {
@@ -484,12 +565,13 @@ footer {
     }
 
     .header-description {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 
     .card,
-    .card-img {
-        height: 345px;
+    .card-img,
+    .card-img-top {
+        height: 225px;
     }
 
     .work-section {
@@ -515,11 +597,106 @@ footer {
         background: rgba(255, 255, 255, 0.3);
     }
 */
-    
+
     .project-callout {
-         padding: 3rem;
+        padding: 3rem;
     }
 
+    /*
+    .left-nav,
+    .right-nav {
+        
+        float: left;
+    }
+*/
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: block;
+    }
+
+
+    .right-nav ul {
+        padding-left: 0;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .nav-option {
+        padding: 20px 0;
+    }
+
+
+    .img {
+        height: 300px;
+        margin-bottom: 0;
+    }
+
+    .project-header-wrapper {
+        margin: 10px 0;
+    }
+
+    .project-header-title {
+        font-size: 2.5rem;
+    }
+
+    .callout-title {
+        font-size: 1rem;
+    }
+
+    .callout-heading {
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
+
+    #doodle-card,
+    #doodle-img,
+    #doodle-overlay {
+        height: 200px;
+    }
+
+    .mobile-text {
+        display: block;
+        padding: 10px 0;
+        font-family: 'Roboto Mono', monospace;
+    }
+
+    .card {
+        margin: 20px 0;
+    }
+    
+    .about-container {
+        margin-top: 10px;
+    }
+    
+    #about-img {
+        width: 80%;
+        margin: 0 10%;
+    }
+    
+    #about-text {
+        width: 100%;
+        padding: 2rem;
+        margin: 0 auto;
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+
+}
+
+@media (min-width: 576px) {
+    .mobile-nav {
+        display: none;
+    }
+
+
+    .mobile-text {
+        display: none;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -527,7 +704,7 @@ footer {
         margin: 5vh 0;
     }
 
-    
+
 }
 
 @media (max-width: 767.98px) {

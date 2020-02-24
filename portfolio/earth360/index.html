@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EARTH 360</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="fonts/fonts.css" />
+
+</head>
+
+<body>
+
+  <div id="preloader">
+      <h1 data-text="Loading Experience...">Loading Experience...</h1>
+  </div>
+   <div id="mainScene">
+    <container id="start">
+
+        <img src="images/overlay2.png" id="overlay">
+
+        <button id="startButton" onclick="startScene()">Start</button>
+    </container>
+
+
+    <div id="header">
+        <img src="images/earth360logo.png" id="logo" onclick="scene1()">
+    </div>
+
+    <div id="panel">
+
+
+        <input class="slider" id="timeline" type="range" min="0" max="4" step="1" value="0" oninput="showVal(this.value)">
+        <p id="navText">Click here to navigate.</p>
+    </div>
+
+    <div id="sceneText">
+        <div id="sceneTitle"></div>
+        <div id="sceneBody"></div>
+        <button class="buttonDec" id="startClimate" onclick="climateChan();">Show Me</button>
+        <button class="buttonDec" id="startArctic" onclick="arcticChange();">Show Me</button>
+        <button class="buttonDec" id="startSnowstorm" onclick="snowStormMove();">Show Me</button>
+        <button class="buttonDec" id="learnMoreJet" onclick="window.location.href='https://qz.com/163636/how-global-warming-can-make-cold-snaps-even-worse/'">Learn More</button>
+
+
+    </div>
+
+
+
+
+    <a href="https://350.org/science/" target="_blank" id="bottomNavRight">Learn More at 350.org</a>
+    <div id="bottomNavLeft">Created by Roneilla Bumanlag</div>
+</div>
+
+    <!--- SCRIPT --->
+
+    <script src="js/Detector.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/ColladaLoader.js"></script>
+    <script src="js/tween.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/slider.js"></script>
+
+</body>
+
+</html>
