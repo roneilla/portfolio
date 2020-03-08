@@ -14,7 +14,9 @@
     <link rel="stylesheet" href="css/style.css">
     <script>
         new WOW().init();
+
     </script>
+        <script src="js/sketch.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155859674-1"></script>
     <script>
@@ -26,14 +28,33 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-155859674-1');
+
     </script>
 </head>
 
 <body>
+    <div class="header container-fluid">
+        <div class="new-nav nav-bar desktop-nav">
+            <div class="nav-option left-nav desktop-nav"><a class="new-nav-text" href="index.html">Roneilla Bumanlag</a></div>
+            <div class="nav-option left-nav mobile-nav"><a class="new-nav-text" href="index.html">RB</a></div>
+            <div class="new-nav-text nav-option right-nav">
+                <ul>
+                    <li><a class="new-nav-text" href="index.html">Work</a></li>
+                    <li><a class="new-nav-text" href="lab.html">Lab</a></li>
+                    <li><a class="new-nav-text" href="info.html">Info</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="sketch-container">
+        </div>
+    </div>
     <div class="container">
-       <div class="nav-bar">
-            <div class="nav-option left-nav desktop-nav"><a href="index.html">Roneilla Bumanlag</a></div>
-            <div class="nav-option left-nav mobile-nav"><a href="index.html">RB</a></div>
+
+
+
+        <div class="nav-bar mobile-nav">
+
+            <div class="nav-option left-nav"><a href="index.html">RB</a></div>
             <div class="nav-option right-nav">
                 <ul>
                     <li><a href="index.html">Work</a></li>
@@ -43,8 +64,9 @@
             </div>
         </div>
 
-        <div class="header-container">
-            <!--                        <div class="header-description">Roneila Bumanlag &mdash; Interaction Designer</div>-->
+
+        <div class="header-container mobile-nav">
+            <div class="header-description">Roneila Bumanlag &mdash; Interaction Designer</div>
             <div class="header-title">Hi, I'm Roneilla. I'm an Interaction Designer based in Toronto.</div>
             <div class="header-description">Looking for internship opportunities for summer 2020!</div>
             <div class="header-link text-mono-up"><a href="mailto:roneillabumanlag@gmail.com">Get in touch &rarr;</a></div>
@@ -54,60 +76,46 @@
             <h2>Selected Work</h2>
             <div class="filter-menu" id="filter-menu">
                 <div class="filter-option active" onclick="filterSelection('all')">All </div>
-                <div class="filter-option" onclick="filterSelection('design')">Design</div>
-                <div class="filter-option" onclick="filterSelection('experience')">Experience</div>
-                <div class="filter-option" onclick="filterSelection('research')">Research</div>
+                 <div class="filter-option" onclick="filterSelection('arvr')">AR/VR</div>
+                <div class="filter-option" onclick="filterSelection('frontend')">Front End Dev</div>
+                <div class="filter-option" onclick="filterSelection('research')"> User Research</div>
+                <div class="filter-option" onclick="filterSelection('uxui')">UX/UI</div>
             </div>
-            <div class="work-section experience">
+            <div class="work-section arvr frontend">
                 <a href="doodlevr.html">
                     <div class="card bg-dark text-dark">
-                        <img src="assets/doodlvr.jpg" class="card-img" alt="...">
+                        <img src="assets/doodlvr.png" class="card-img" alt="...">
                         <div class="card-img-overlay">
-                            <h5 class="text-mono card-title text-left card-left">Doodle VR
-                            </h5>
-                            <h5 class="text-mono card-title text-right card-left">2018</h5>
-                        </div>
-                        <div class="mobile-text">
-                            <div class="mobile-text-left">Doodle VR</div>
-                            <div class="mobile-text-right">
-                                2018
-                            </div>
+                            <h2 class="card-title-light">
+                                Doodle VR
+                            </h2>
+                            <p class="text-mono-up light-text text-desc">AR/VR, Front End Dev, Interactive</p>
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="work-section design research">
+            <div class="work-section uxui research">
                 <a href="bridge.html">
                     <div class="card bg-dark text-dark">
-                        <img src="assets/bridge.jpg" class="card-img" alt="...">
+                        <img src="assets/bridge.png" class="card-img" alt="...">
                         <div class="card-img-overlay">
-                            <h5 class="text-mono card-title text-left card-left">Bridge
-                            </h5>
-                            <h5 class="text-mono card-title text-right card-left">2020</h5>
-                        </div>
-                        <div class="mobile-text">
-                            <div class="mobile-text-left">Bridge</div>
-                            <div class="mobile-text-right">
-                                2020
-                            </div>
+                            <h2 class="card-title-light">
+                                Bridge
+                            </h2>
+                            <p class="text-mono-up light-text text-desc">UX/UI, Research</p>
                         </div>
                     </div>
                 </a>
             </div>
-            <div class="work-section experience">
+            <div class="work-section arvr frontend">
                 <a href="mural.html">
                     <div class="card bg-dark text-dark">
                         <img src="assets/mural.jpg" class="card-img" alt="...">
                         <div class="card-img-overlay">
-                            <h5 class="text-mono card-title text-left card-left">Interactive Mural
-                            </h5>
-                            <h5 class="text-mono card-title text-right card-left">2019</h5>
-                        </div>
-                        <div class="mobile-text">
-                            <div class="mobile-text-left">Interactive Mural</div>
-                            <div class="mobile-text-right">
-                                2019
-                            </div>
+                            <h2 class="card-title-dark">
+                                Interactive Mural
+                            </h2>
+                            <p class="text-mono-up text-desc">AR/VR, Front End Dev, Interactive</p>
                         </div>
                     </div>
                 </a>
@@ -122,12 +130,10 @@
             </div>
             <div class="footer-section">
                 <div class="social-links">
-<!--                    <a href="https://www.behance.net/roneillbumanla"><img src="assets/icons/behance.svg" alt="" class="social-icon"></a>-->
                     <a href="https://www.dribbble.com/roneilla"><img src="assets/icons/dribble.svg" alt="" class="social-icon"></a>
                     <a href="https://www.github.com/roneilla"><img src="assets/icons/github.svg" alt="" class="social-icon"></a>
                     <a href="https://www.instagram.com/eillamadethis"><img src="assets/icons/instagram.svg" alt="" class="social-icon"></a>
                     <a href="https://www.linkedin.com/in/roneilla"><img src="assets/icons/linkedin.svg" alt="" class="social-icon"></a>
-<!--                    <a href="https://www.twitter.com/roneilla"><img src="assets/icons/twitter.svg" alt="" class="social-icon"></a>-->
                 </div>
             </div>
             <div class="copyright">
@@ -141,4 +147,6 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-</body></html>
+</body>
+
+</html>

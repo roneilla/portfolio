@@ -15,6 +15,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'aktiv-grotesk', sans-serif;
+/*    cursor: url(/assets/circle-cursor-black.png), auto;*/
 }
 
 h1 {
@@ -66,13 +67,35 @@ p {
     text-align: center;
 }
 
-/*
 #sketch-container {
     transition: 2s linear ease;
+    cursor: none;
+    padding: 0;
+    margin: 0;
 }
-*/
 
 /* Navigation */
+
+.new-nav {
+    background-color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1001;
+    padding: 0 50px;
+}
+
+.new-nav-text {
+    color: white;
+}
+
+.new-nav-text:hover {
+    color: #ccc;
+}
+
+.header {
+    background: black;
+}
 
 .nav-bar {
     width: 100%;
@@ -113,6 +136,14 @@ a {
 a:hover {
     color: #000;
     text-decoration: underline;
+}
+
+.light-text {
+    color: #fff;
+}
+
+.dark-text {
+    color: #000;
 }
 
 
@@ -214,11 +245,22 @@ a:hover {
 
 }
 
-.card-title {
-    color: #000;
-    font-size: 1rem;
-    width: 50%;
+.card-title-light {
+    color: #fff;
+/*    font-size: 1rem;*/
+    width: 100%;
     float: left;
+}
+
+.card-title-dark {
+    color: #000;
+/*    font-size: 1rem;*/
+    width: 100%;
+    float: left;
+}
+
+.text-desc {
+    font-size: 1rem;
 }
 
 .work-section {
@@ -685,9 +727,8 @@ footer {
         line-height: 2rem;
     }
 
-    .card-img-overlay,
-    .card-img-overlay .text {
-        display: none;
+    .card-img-overlay {
+        background-color: rgba(0, 0,0, 0.2);
     }
 
 }
