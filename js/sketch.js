@@ -1,12 +1,12 @@
 if (!(/iPhone|iPad|iPod|Android|webOS|BlackBerry|Opera Mini|IEMobile/i.test(navigator.userAgent))) {
-    let font, pts, colour;
-    let textEl = 5;
+    var font, pts, colour;
+    var textEl = 5;
     var points = [];
     var theme = ['rgb(255,0,0)', 'rgb(0,255,0)', 'rgb(0,0,255)'];
 
-    let message = "HELLO";
-    let description = "I'm Roneilla, an Interaction Designer based in Toronto.\n\nScroll down to view my work!";
-    let currentTime = 0;
+    var message = "HELLO";
+    var description = "I'm Roneilla, an Interaction Designer based in Toronto.\n\nScroll down to view my work!";
+    var currentTime = 0;
 
     var textDist = 40;
 
@@ -45,14 +45,14 @@ if (!(/iPhone|iPad|iPod|Android|webOS|BlackBerry|Opera Mini|IEMobile/i.test(navi
             0, 1, min_, max_);
     }
 
-    let xz = 0;
-    let yz = 1000;
+    var xz = 0;
+    var yz = 1000;
 
-    let xz2 = 0;
-    let yz2 = 1000;
+    var xz2 = 0;
+    var yz2 = 1000;
 
-    let xz3 = 0;
-    let yz3 = 1000;
+    var xz3 = 0;
+    var yz3 = 1000;
 
     function draw() {
         blendMode(BLEND);
@@ -64,17 +64,16 @@ if (!(/iPhone|iPad|iPod|Android|webOS|BlackBerry|Opera Mini|IEMobile/i.test(navi
         blendMode(ADD);
         push();
         translate(width / 5, height / 1.75);
-        for (let i = 0; i < pts.length; i++) {
-            let xoff = ns(pts[i].x, pts[i].y, xz, 0.005, -50, 50);
-            let yoff = ns(pts[i].y, pts[i].x, yz, 0.005, -50, 50);
+        for (var i = 0; i < pts.length; i++) {
+            var xoff = ns(pts[i].x, pts[i].y, xz, 0.005, -50, 50);
+            var yoff = ns(pts[i].y, pts[i].x, yz, 0.005, -50, 50);
 
-            let xoff2 = ns(pts[i].x, pts[i].y, xz2, 0.005, -50, 50);
-            let yoff2 = ns(pts[i].y, pts[i].x, yz2, 0.005, -50, 50);
+            var xoff2 = ns(pts[i].x, pts[i].y, xz2, 0.005, -50, 50);
+            var yoff2 = ns(pts[i].y, pts[i].x, yz2, 0.005, -50, 50);
 
-            let xoff3 = ns(pts[i].x, pts[i].y, xz3, 0.005, -50, 50);
-            let yoff3 = ns(pts[i].y, pts[i].x, yz3, 0.005, -50, 50);
+            var xoff3 = ns(pts[i].x, pts[i].y, xz3, 0.005, -50, 50);
+            var yoff3 = ns(pts[i].y, pts[i].x, yz3, 0.005, -50, 50);
 
-            //        colour = map(i, 0, pts.length, 0, 360);
             fill(255, 0, 0);
             ellipse(pts[i].x + xoff, pts[i].y + yoff, textEl, textEl);
 
@@ -85,13 +84,20 @@ if (!(/iPhone|iPad|iPod|Android|webOS|BlackBerry|Opera Mini|IEMobile/i.test(navi
             ellipse(pts[i].x + xoff3, pts[i].y + yoff3, textEl, textEl);
         }
         pop();
+        
+        let xzM = map(mouseX, 0, width, 0.25,0.75);
+        let yzM = map(mouseY, 0, width, 0.25,0.75);
+        let xzM2 = map(mouseX, 0, width, 0.25,0.9);
+        let yzM2 = map(mouseY, 0, width, 0.25,0.9);
+        let xzM3 = map(mouseX, 0, width, 0.25,1);
+        let yzM3 = map(mouseY, 0, width, 0.25,1);
 
-        xz += 1;
-        yz += 1;
-        xz2 += 1.1;
-        yz2 += 1.1;
-        xz3 += 1.2;
-        yz3 += 1.2;
+        xz += 0.75;
+        yz += 0.75;
+        xz2 += 0.9;
+        yz2 += 0.9;
+        xz3 += 1;
+        yz3 += 1;
         blendMode(BLEND);
         for (var i = 0; i < points.length; i++) {
             var point = points[i];
@@ -100,22 +106,12 @@ if (!(/iPhone|iPad|iPod|Android|webOS|BlackBerry|Opera Mini|IEMobile/i.test(navi
             fill(255);
             point.show();
         }
-        //        stroke(255, 240, 50);
-        //        strokeWeight(40);
-        //        noFill();
-        //        rect(width / 2, height / 2, width, height);
 
         noStroke();
         fill(255);
         textFont(font);
         textSize(18);
         text(description, width / 2, height / 2 + height / 6);
-        //
-        //        blendMode(BLEND);
-        //        strokeWeight(1);
-        //        stroke(255);
-        //        fill(255, 50);
-        //        ellipse(mouseX, mouseY, 450);
 
         noStroke();
         fill(255);
@@ -125,7 +121,6 @@ if (!(/iPhone|iPad|iPod|Android|webOS|BlackBerry|Opera Mini|IEMobile/i.test(navi
 
 
     function Vehicle(x, y) {
-        // this.pos = createVector(x, y);
         this.pos = createVector(random(width), random(height));
         this.vel = p5.Vector.random2D();
         this.acc = createVector();
@@ -176,8 +171,6 @@ if (!(/iPhone|iPad|iPod|Android|webOS|BlackBerry|Opera Mini|IEMobile/i.test(navi
             var desired = p5.Vector.sub(target, this.pos);
             var distance = desired.mag();
             if (distance < this.bounds) {
-                //                this.xdirection *= -1;
-                //                this.ydirection *= -1;
                 desired.setMag(this.maxspeed);
                 desired.mult(-1);
                 var steer = p5.Vector.sub(desired, this.vel);
