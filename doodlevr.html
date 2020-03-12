@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script>
         new WOW().init();
+
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155859674-1"></script>
@@ -25,6 +26,7 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-155859674-1');
+
     </script>
 </head>
 
@@ -73,16 +75,17 @@
             <div class="project-section">
                 <h2 class="project-section-sm section-title text-mono">Research</h2>
                 <div class="project-section-med section-paragraph">
-                     <h4 class="section-subheading text-mono-bold">About Google Doodles</h4>
-                   A Google Doodle is a temporary alteration of the logo on Google’s homepage. It is usually an art piece designed to celebrate a person, an event, etc. Some doodles have been paintings, illustrations, animations, or videos. Recently, Google has been creating interactive doodles such as games.
+                    <h4 class="section-subheading text-mono-bold">About Google Doodles</h4>
+                    A Google Doodle is a temporary alteration of the logo on Google’s homepage. It is usually an art piece designed to celebrate a person, an event, etc. Some doodles have been paintings, illustrations, animations, or videos. Recently, Google has been creating interactive doodles such as games.
                     <br><br>
-                     <h4 class="section-subheading text-mono-bold">History of Virtual Reality</h4>
-                    The first ever VR device was a sensorama, which was a big bulky machine that displayed wireframes. Currently, VR can be experiences using devices as small as a phone. Users can use it for anything ranging from immersive 3d models to full gameplay experiences.</div>
+                    <h4 class="section-subheading text-mono-bold">History of Virtual Reality</h4>
+                    The first ever VR device was a sensorama, which was a big bulky machine that displayed wireframes. Currently, VR can be experiences using devices as small as a phone. Users can use it for anything ranging from immersive 3d models to full gameplay experiences.
+                </div>
             </div>
             <div class="project-callout">
                 <div class="callout-title text-mono-up">Solution</div>
                 <div class="callout-heading">
-                    We created an lightweight, in-browser interactive VR Google Doodle that uses inexpensive cardboard headsets and is accessible on desktop.
+                    We created an in-browser interactive VR Google Doodle that is accessible on desktop and utilizes inexpensive headsets for mobile users.
                 </div>
             </div>
             <div class="project-section">
@@ -97,14 +100,13 @@
                     ¬ Walkable wireframe environment (to show history of VR)
                 </div>
             </div>
-            <img src="assets/img/doodle-ideation-1.png" alt="" class="img-ctn">
             <div class="project-section">
                 <h2 class="project-section-sm section-title text-mono">Development</h2>
                 <div class="project-section-med section-paragraph">
                     Our biggest obstacle: we didn’t know how to create virtual reality experiences. Through hours of research and mentoring from an upper year IXD student, we found A-Frame.
                     <br>
                     <br>
-                     <h4 class="section-subheading text-mono-bold">About A-Frame</h4>
+                    <h4 class="section-subheading text-mono-bold">About A-Frame</h4>
                     A-Frame is a JavaScript framework that simplifies and minimizes the code needed to create virtual reality experiences for web-based programs. While my team got to work on modelling the 3d environment, I started to explore and learn the new framework and create some test environments.
                     <br>
                     <br>
@@ -141,19 +143,37 @@
         <div class="project-section">
             <h2 class="project-section-sm section-title text-mono">Final Product</h2>
             <div class="project-section-med section-paragraph">
-                The final experience consisted of two scenes. The first scene is a wireframe environment on a Google landing page. The second scene is a low-poly environment. It represents virtual reality's 50th birthday. There are models of VR goggles spread throughout the environment, which creates a fun experience for users on desktop.
+                We were celebrating an anniversary, so we wanted to show both the past and present of virtual reality in order to show how much it has come in the past 50 years of its existence. The final experience consisted of two scenes. The first scene is a wireframe environment on a Google landing page.
                 <br><br>
+                <img src="assets/img/doodle-ideation-1.png" alt="" class="img-ctn">
+                The second scene is a low-poly environment. It represents virtual reality's 50th birthday. There are models of VR goggles spread throughout the environment, which creates a fun experience for users on desktop.
+                <br><br>
+                <h4 class="section-subheading text-mono-bold">Interactions and Easter Eggs</h4>
                 <img src="assets/img/doodle-final-3.png" alt="" class="img-ctn-med-ctr">
-                 To the left is a small box of fireworks. After the user gazes at the firework for a few seconds, this will emit an effect which "launches" the fireworks and triggers an explosion. Gazing on the balloons on top of the text will trigger their explosion.
+                To the left is a small box of fireworks. After the user gazes at the firework for a few seconds, this will emit an effect which "launches" the fireworks and triggers an explosion. Gazing on the balloons on top of the text will trigger their explosion.
                 <br><br>
                 <img src="assets/img/doodle-final-2.png" alt="" class="img-ctn-med-ctr">
                 To the right is a sensorama. This is a tribute to the first VR machine. There are two interactions attached to the sensorama. If the user gazes over, a text box with a brief description of the sensorama will appear. If the user approaches it, they will see a dark screen. After a few seconds of gazing into the sensorama, the user will be lead to the wireframe environment (representing what you would see if you looked into a real sensorama).
                 <br><br>
+                <h4 class="section-subheading text-mono-bold">Challenges</h4>
                 My biggest breakthrough: clickable objects. One of the interactions I wanted to add to the environment was clickable objects. I spent hours reading the documentation, doing researching, and experimenting in order to get it working the way I wanted it to. I was an amateur coder with little JavaScript experience and no A-Frame experience, so it was quite a challenge.
                 <br>
                 <br>
                 After many experiments, I found that when objects are imported separately from the scene, they can be called on as objects in JavaScript. Add an event listener here, and an effect there, and we got clickable objects!
-                <h4 class="section-subheading text-mono-bold">Reflection</h4>
+            </div>
+        </div>
+        <div class="project-section">
+            <h2 class="project-section-sm section-title text-mono">Reflection</h2>
+            <div class="project-section-med section-paragraph">
+                <h4 class="section-subheading text-mono-bold">Success Areas</h4>
+                My team was really proud of our outcome. We created a VR experience! The few weeks of coding helped me sharpen my coding skills: both development and problem-solving. I learned a new language (A-Frame) and improved my knowledge and skills in another (JavaScript).
+                <h4 class="section-subheading text-mono-bold">Growth Area</h4>
+                For future iterations and development, I would improve the experience by implement collision detection so users can't drift out of the environment. I would also explore the possibility of experience in order to raise user interest and interaction.
+                <h4 class="section-subheading text-mono-bold">Key Takeaways</h4>
+                One of the key takeaways from this project was learning how to design for users for an experience that was more of a game rather than a product that helps users with their needs. As an interaction designer, I am always guided by my user-first mindset. During the conceptual process, we wanted to ensure that what we made was interesting enough for users to want to see it. We wanted to retain their attention long enough for them to enjoy the VR, and find the easter eggs we hid all over the environment.
+                <br><br>
+                Another takeaway is the importance of user testing and iteration. During the first half of development, we were the only ones who looked at the project. This meant that we couldn't see any flaws or issues with the experience. After we conducted our first round of user testing, we found many issues such as colors, weird positioning of items, and incomprehensible interactions. We made the appropriate changes according to the feedback we received. For the last half of the project, we performed constant user tests to make sure that the experience was as user-friendly and user-centered as possible!
+                <br><br>
                 Before this project, I had minimal experience with JavaScript. I didn’t fully understand how it all worked. I learned how various parts of JavaScript work, as well as how to properly organize code in order to make my workflow more efficient.
                 <br><br>
                 Later in the next semester, I created a beginner tutorial to A-Frame and creating interactive environments. If you want to learn more, <a href="mailto:roneillabumanlag@gmail.com" class="clickable">send me an email</a>!
@@ -183,4 +203,6 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-</body></html>
+</body>
+
+</html>
